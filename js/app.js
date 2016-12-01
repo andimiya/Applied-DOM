@@ -1,3 +1,6 @@
+  /*jshint esversion: 6 */
+
+
 (function(window) {
 
   /*
@@ -14,7 +17,7 @@
 
    function setMyLightGreen() {
     var lightId = this.dataset.lightId;
-    console.log(this.dataset.lightId, 'this');  //dataset and lightId is undefined right now
+    // console.log(this.dataset.lightId, 'this');  //dataset and lightId is undefined right now
     document.getElementById(lightId).className = 'light-green';
    }
 
@@ -36,14 +39,13 @@
     document.getElementById(lightId).className = desiredClass;
    }
 
-
   /*
    * Declare 14 constants btn1, btn2, btn3,...
    * use a dom element selector method to assign each const
    * to the button that has an id of the same name.
    */
 
-const btn1 = document.getElementById('btn1')
+const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const btn4 = document.getElementById('btn4');
@@ -72,6 +74,7 @@ btn1.addEventListener('click', myFunction);
 
 function myFunction() {
   setMyLightGreen.apply(this);
+  console.log(this,'this');
 }
 
   /*
@@ -83,11 +86,19 @@ function myFunction() {
    * to set the context to the correct object
    */
 
+btn2.addEventListener('click', () => {
+  // setMyLightGreen.apply(this);  //lightID is undefined right now because 'this' has no context here
+
+  // console.log(this,'this'); //this is applied to the window now
+});
 
   /*
    * Add a click event listener to btn3
    * the handler method will be a reference to the setMyLightGreen function
    */
+
+  btn3.addEventListener('click', setMyLightGreen);
+
 
 
   /*
