@@ -97,8 +97,7 @@ btn2.addEventListener('click', () => {
    * the handler method will be a reference to the setMyLightGreen function
    */
 
-  btn3.addEventListener('click', setMyLightGreen);
-
+  btn3.addEventListener('click', setMyLightGreen)
 
 
   /*
