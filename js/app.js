@@ -12,6 +12,10 @@
    * on this dom element, set the className to 'light-green'
    */
 
+   function setMyLightGreen() {
+   }
+   var lightId = dataset.lightId;
+   document.getElementById('zdfepgrtcs').className = 'green';
 
   /*
    * Create a function named setMyLightClass
