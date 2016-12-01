@@ -13,9 +13,11 @@
    */
 
    function setMyLightGreen() {
+    var lightId = this.dataset.lightId;
+    console.log(this.dataset.lightId, 'this');  //dataset and lightId is undefined right now
+    document.getElementById(lightId).className = 'light-green';
    }
-   var lightId = dataset.lightId;
-   document.getElementById('zdfepgrtcs').className = 'green';
+
 
   /*
    * Create a function named setMyLightClass
@@ -28,6 +30,11 @@
    * use a dom method to select an element where it's ID matches the value of lightId
    * on this dom element, set the className to the value of desiredClass
    */
+
+   function setMyLightClass (event, desiredClass) {
+    var lightId = this.dataset.lightId;  //dataset and lightId is undefined right now
+    document.getElementById(lightId).className = desiredClass;
+   }
 
 
   /*
