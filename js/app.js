@@ -35,7 +35,7 @@
    */
 
    function setMyLightClass (event, desiredClass) {
-    var lightId = this.dataset.lightId;  //dataset and lightId is undefined right now
+    var lightId = this.dataset.lightId;  //if context is wiped, dataset and lightId are undefined
     document.getElementById(lightId).className = desiredClass;
    }
 
@@ -87,9 +87,9 @@ function myFunction() {
    */
 
 btn2.addEventListener('click', () => {
-  // setMyLightGreen.apply(this);  //lightID is undefined right now because 'this' has no context here
+  setMyLightGreen.apply(btn2);  //lightID is undefined right now because 'this' has no context here
 
-  // console.log(this,'this'); //this is applied to the window now
+  console.log(this,'this'); //this is applied to the window now
 });
 
   /*
@@ -116,7 +116,6 @@ btn2.addEventListener('click', () => {
     setMyLightClass.apply(this, [event, 'light-green']);
   }
 
-
   /*
    * Add a click event listener to btn5
    * the handler method will be a fat arrow function expression
@@ -128,6 +127,9 @@ btn2.addEventListener('click', () => {
    *   and passing two aditional arguments, event and 'light-green'
    */
 
+  btn5.addEventListener('click', (event) => {
+    setMyLightClass.apply(btn5, [event, 'light-green']);
+  });
 
   /*
    * Add a click event listener to btn6
