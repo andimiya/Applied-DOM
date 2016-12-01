@@ -97,7 +97,7 @@ btn2.addEventListener('click', () => {
    * the handler method will be a reference to the setMyLightGreen function
    */
 
-  btn3.addEventListener('click', setMyLightGreen)
+  btn3.addEventListener('click', setMyLightGreen);
 
 
   /*
@@ -110,6 +110,11 @@ btn2.addEventListener('click', () => {
    * to set the context to the correct object (the current context)
    *   and passing two aditional arguments, event and 'light-green'
    */
+
+  btn4.addEventListener('click', anotherFunction);
+  function anotherFunction(){
+    setMyLightClass.apply(this, [event, 'light-green']);
+  }
 
 
   /*
