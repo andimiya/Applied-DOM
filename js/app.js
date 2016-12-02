@@ -242,6 +242,7 @@ btn2.addEventListener('click', () => {
    * to set the context to the btn12 object
    */
 
+   const setLight12Class = setMyLightClass.bind(btn12);
 
   /*
    * Add a click event listener to btn12
@@ -252,6 +253,11 @@ btn2.addEventListener('click', () => {
    *   passing 2 additional arguments
    *     event, 'light-green'
    */
+
+   btn12.addEventListener('click', btn12Function);
+   function btn12Function(){
+    setLight12Class(event, 'light-green');
+   }
 
 
   /*
