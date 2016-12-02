@@ -288,7 +288,6 @@ btn2.addEventListener('click', () => {
 
    btn14.addEventListener('click', setMyLightGreen.bind(btn14));
 
-
   /*
    * Add a click event listener to btn15
    * Using just one function invocation and the Function prototype method, bind
