@@ -221,6 +221,7 @@ btn2.addEventListener('click', () => {
    *     null, 'light-green'
    */
 
+   const setLight11Green = setMyLightClass.bind(btn11, null, 'light-green');
 
   /*
    * Add a click event listener to btn11
@@ -229,6 +230,10 @@ btn2.addEventListener('click', () => {
    * will invoke the setLight11Green function
    */
 
+   btn11.addEventListener('click', btn11Function);
+   function btn11Function(){
+    setLight11Green();
+   }
 
   /*
    * Declare a new const named setLight12Class
