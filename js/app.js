@@ -17,7 +17,6 @@
 
    function setMyLightGreen() {
     var lightId = this.dataset.lightId;
-    // console.log(this.dataset.lightId, 'this');  //dataset and lightId is undefined right now
     document.getElementById(lightId).className = 'light-green';
    }
 
@@ -59,6 +58,7 @@ const btn11 = document.getElementById('btn11');
 const btn12 = document.getElementById('btn12');
 const btn13 = document.getElementById('btn13');
 const btn14 = document.getElementById('btn14');
+const btn15 = document.getElementById('btn15');
 
 
   /*
@@ -295,6 +295,16 @@ btn2.addEventListener('click', () => {
    *
    * Hint: Do not declare a new function expression as an event handler.
    */
+
+   btn15.addEventListener('click', setMyLightClass.bind(btn15, event, 'light-green'));
+
+
+// const setLight12Class = setMyLightClass.bind(btn12);
+
+//    btn12.addEventListener('click', btn12Function);
+//    function btn12Function(){
+//     setLight12Class(event, 'light-green');
+//    }
 
 
 }(window));
