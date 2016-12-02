@@ -73,7 +73,7 @@ const btn15 = document.getElementById('btn15');
 btn1.addEventListener('click', myFunction);
 
 function myFunction() {
-  setMyLightGreen.apply(this);
+  setMyLightGreen.apply(btn1);
   console.log(this,'this');
 }
 
@@ -206,11 +206,11 @@ btn2.addEventListener('click', () => {
    * will invoke the setLight10Green function
    */
 
-   btn10.addEventListener('click', btn10Function);
+   btn10.addEventListener('click', setLight10Green);
 
-   function btn10Function(){
-    setLight10Green();
-   }
+   // function btn10Function(){
+   //  setLight10Green();
+   // }
 
   /*
    * Declare a new const named setLight11Green
@@ -296,7 +296,7 @@ btn2.addEventListener('click', () => {
    * Hint: Do not declare a new function expression as an event handler.
    */
 
-   btn15.addEventListener('click', setMyLightClass.bind(btn15, event, 'light-green'));
+   btn15.addEventListener('click', setMyLightClass.bind(btn15, null, 'light-green'));
 
 
 // const setLight12Class = setMyLightClass.bind(btn12);
